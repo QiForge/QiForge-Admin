@@ -3,20 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QiForge Admin Login</title>
+  <title>QiForge Access Portal</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
-<body class="login-body">
-  <div class="login-container glass">
-    <img src="assets/logo.png" alt="QiForge Logo" class="logo" />
-    <h2>Admin Login</h2>
-    <form id="loginForm">
-      <input type="email" id="email" placeholder="Email" required />
-      <input type="password" id="password" placeholder="Password" required />
-      <button type="submit">Login</button>
-    </form>
-    <p class="forgot">Forgot password?</p>
-  </div>
+<body>
+  <!-- Reactive Background -->
+  <div id="pattern"></div>
+  <div id="light"></div>
+
+  <!-- Login UI -->
+  <main class="login-wrapper">
+    <div class="login-card glass">
+      <img src="assets/logo.png" alt="QiForge Logo" class="logo" />
+      <h1>QiForge Access Portal</h1>
+      <p class="subtitle">Authorized personnel only</p>
+
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@qiforge.org" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="••••••••" required />
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+
+      <p class="note">© QiForge Organization 2025</p>
+    </div>
+  </main>
+
+  <script src="js/background.js"></script>
   <script src="js/auth.js"></script>
 </body>
 </html>
